@@ -9,7 +9,7 @@ const execTemplate = (path, args) => {
       console.log(`An error: ${error}`);
     }
     if (stderr) {
-      console.log(`stterr: ${stderr}`);
+      console.log(`stderr: ${stderr}`);
     }
     log.write(stdout);
   });
