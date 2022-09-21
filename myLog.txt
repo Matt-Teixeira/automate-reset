@@ -1,272 +1,304 @@
+
 PLAY [Ansible Find Example] ****************************************************
 
 TASK [Gathering Facts] *********************************************************
-Friday 09 September 2022  17:27:46 +0000 (0:00:00.017)       0:00:00.017 ****** 
-ok: [SME01096]
-ok: [SME01891]
+Wednesday 21 September 2022  20:36:53 +0000 (0:00:00.015)       0:00:00.015 *** 
+fatal: [SME14637]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname sme14637: Name or service not known", "unreachable": true}
+ok: [SME02583]
 ok: [SME01422]
-ok: [SME01892]
+ok: [SME01897]
 ok: [SME01386]
-ok: [SME01880]
-ok: [SME09782]
+ok: [SME01891]
 ok: [SME01867]
 ok: [SME01890]
-ok: [SME02524]
-ok: [SME02583]
-ok: [SME02582]
-ok: [SME01423]
-ok: [SME01873]
-ok: [SME11808]
+ok: [SME01892]
+ok: [SME01880]
 ok: [SME01872]
+ok: [SME09782]
+ok: [SME02524]
+ok: [SME01423]
 ok: [SME01882]
-ok: [SME01893]
+ok: [SME02582]
+ok: [SME01873]
 ok: [SME11810]
+ok: [SME11808]
+ok: [SME01893]
 ok: [SME01141]
-ok: [SME01897]
 ok: [SME01140]
+ok: [SME01096]
 ok: [SME01123]
 ok: [SME12500]
-ok: [SME01133]
 fatal: [SME01134]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname sme01134: Name or service not known", "unreachable": true}
 ok: [SME12501]
+ok: [SME01133]
 ok: [SME10255]
 fatal: [SME12452]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname sme12452: Name or service not known", "unreachable": true}
-ok: [SME02483]
+fatal: [SME02483]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.31.2.20 port 22: Connection timed out", "unreachable": true}
 fatal: [SME12414]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 167.171.166.178 port 22: Connection timed out", "unreachable": true}
 fatal: [SME12415]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 167.171.166.167 port 22: Connection timed out", "unreachable": true}
 fatal: [SME12424]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 167.171.166.167 port 22: Connection timed out", "unreachable": true}
 
 TASK [List Files] **************************************************************
-Friday 09 September 2022  17:28:21 +0000 (0:00:35.353)       0:00:35.370 ****** 
-changed: [SME01096]
-changed: [SME01891]
-changed: [SME01892]
-changed: [SME01422]
-changed: [SME01386]
-changed: [SME01867]
-changed: [SME01880]
-changed: [SME09782]
-changed: [SME01890]
-changed: [SME02524]
+Wednesday 21 September 2022  20:37:26 +0000 (0:00:32.381)       0:00:32.397 *** 
 changed: [SME02583]
+changed: [SME01386]
+changed: [SME01422]
+changed: [SME01891]
+changed: [SME01897]
+changed: [SME01867]
+changed: [SME01892]
+changed: [SME01890]
+changed: [SME01872]
+changed: [SME09782]
+changed: [SME02524]
+changed: [SME01880]
 changed: [SME02582]
+changed: [SME01882]
 changed: [SME01423]
 changed: [SME01873]
-changed: [SME01872]
-changed: [SME01882]
 changed: [SME11808]
 changed: [SME11810]
 changed: [SME01893]
 changed: [SME01140]
 changed: [SME01141]
-changed: [SME01897]
+changed: [SME01096]
 changed: [SME01123]
-changed: [SME12500]
-changed: [SME12501]
 changed: [SME01133]
+changed: [SME12501]
+changed: [SME12500]
 changed: [SME10255]
-changed: [SME02483]
 
 TASK [debug] *******************************************************************
-Friday 09 September 2022  17:28:34 +0000 (0:00:12.295)       0:00:47.665 ****** 
+Wednesday 21 September 2022  20:37:37 +0000 (0:00:11.015)       0:00:43.412 *** 
 ok: [SME01386] => {
     "command_output.stdout_lines": [
-        "up 7 weeks, 6 days, 21 hours, 22 minutes",
-        "-rw-rw-r-- 1 avante avante 29835 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 15228 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME01096] => {
-    "command_output.stdout_lines": [
-        "up 22 weeks, 3 days, 21 minutes",
-        "-rw-rw-r-- 1 avante avante 86669 Sep  9 13:17 v3_ge_mm3.log",
-        "-rw-rw-r-- 1 avante avante 13905 Sep  9 13:15 v2_edu2.log"
+        "up 9 weeks, 5 days, 31 minutes",
+        "-rw-rw-r-- 1 avante avante 36465 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 18612 Sep 21 16:15 v3_ge_mm3.log"
     ]
 }
 ok: [SME01422] => {
     "command_output.stdout_lines": [
-        "up 6 weeks, 2 days, 19 hours, 48 minutes",
-        "-rw-rw-r-- 1 avante avante 47655 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 18279 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME01891] => {
-    "command_output.stdout_lines": [
-        "up 10 weeks, 6 days, 12 hours, 18 minutes",
-        "-rw-rw-r-- 1 avante avante 1253414 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 2657337 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME01892] => {
-    "command_output.stdout_lines": [
-        "up 2 days, 12 hours, 29 minutes",
-        "-rw-rw-r-- 1 avante avante 3585739 Sep  9 13:15 v3_ge_mm3.log",
-        "-rw-rw-r-- 1 avante avante 1239103 Sep  9 13:15 v2_edu2.log"
-    ]
-}
-ok: [SME01872] => {
-    "command_output.stdout_lines": [
-        "up 1 week, 4 days, 2 minutes",
-        "-rw-rw-r-- 1 avante avante 29989 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 15228 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME01880] => {
-    "command_output.stdout_lines": [
-        "up 6 weeks, 2 days, 2 hours, 39 minutes",
-        "-rw-rw-r-- 1 avante avante 28878 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 12813 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME01867] => {
-    "command_output.stdout_lines": [
-        "up 20 weeks, 4 days, 3 hours, 46 minutes",
-        "-rw-rw-r-- 1 avante avante 53168 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 30915 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME01890] => {
-    "command_output.stdout_lines": [
-        "up 1 day, 23 hours, 5 minutes",
-        "-rw-rw-r-- 1 avante avante 3693417 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 6032565 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME09782] => {
-    "command_output.stdout_lines": [
-        "up 20 weeks, 4 days, 49 minutes",
-        "-rw-rw-r-- 1 avante avante 269875 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante  53325 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME02524] => {
-    "command_output.stdout_lines": [
-        "up 33 weeks, 2 days, 1 hour, 54 minutes",
-        "-rw-rw-r-- 1 avante avante 44681 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 15228 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME02582] => {
-    "command_output.stdout_lines": [
-        "up 4 weeks, 1 day, 3 hours, 55 minutes",
-        "-rw-rw-r-- 1 avante avante 80201 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 85875 Sep  9 13:15 v3_ge_mm3.log"
+        "up 8 weeks, 22 hours, 57 minutes",
+        "-rw-rw-r-- 1 avante avante 36274 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 22341 Sep 21 16:15 v3_ge_mm3.log"
     ]
 }
 ok: [SME02583] => {
     "command_output.stdout_lines": [
-        "up 26 weeks, 20 hours, 38 minutes",
-        "-rw-rw-r-- 1 avante avante 58300 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 15228 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME01423] => {
-    "command_output.stdout_lines": [
-        "up 6 weeks, 3 days, 1 hour, 21 minutes",
-        "-rw-rw-r-- 1 avante avante 30051 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 18279 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME01873] => {
-    "command_output.stdout_lines": [
-        "up 4 weeks, 6 days, 23 hours, 28 minutes",
-        "-rw-rw-r-- 1 avante avante 29762 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 18279 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME01882] => {
-    "command_output.stdout_lines": [
-        "up 5 days, 4 hours, 36 minutes",
-        "-rw-rw-r-- 1 avante avante 29856 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 30915 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME01893] => {
-    "command_output.stdout_lines": [
-        "up 6 weeks, 2 days, 3 hours, 59 minutes",
-        "-rw-rw-r-- 1 avante avante 49241 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 18279 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME11808] => {
-    "command_output.stdout_lines": [
-        "up 28 weeks, 2 days, 22 hours, 30 minutes",
-        "-rw-rw-r-- 1 avante avante 55104 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 30969 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME11810] => {
-    "command_output.stdout_lines": [
-        "up 28 weeks, 3 days, 2 hours, 27 minutes",
-        "-rw-rw-r-- 1 avante avante 57495 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 18279 Sep  9 13:15 v3_ge_mm3.log"
+        "up 27 weeks, 5 days, 23 hours, 47 minutes",
+        "-rw-rw-r-- 1 avante avante 36807 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 18612 Sep 21 16:15 v3_ge_mm3.log"
     ]
 }
 ok: [SME01897] => {
     "command_output.stdout_lines": [
-        "up 9 weeks, 2 hours, 5 minutes",
-        "-rw-rw-r-- 1 avante avante 2227093 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 1764701 Sep  9 13:15 v3_ge_mm3.log"
+        "up 10 weeks, 5 days, 5 hours, 14 minutes",
+        "-rw-rw-r-- 1 avante avante 2854271 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 2130197 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01891] => {
+    "command_output.stdout_lines": [
+        "up 12 weeks, 4 days, 15 hours, 27 minutes",
+        "-rw-rw-r-- 1 avante avante 36451 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 18612 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01872] => {
+    "command_output.stdout_lines": [
+        "up 4 days, 18 hours, 30 minutes",
+        "-rw-rw-r-- 1 avante avante 36501 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 18612 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01892] => {
+    "command_output.stdout_lines": [
+        "up 2 weeks, 15 hours, 38 minutes",
+        "-rw-rw-r-- 1 avante avante 36803 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 37785 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01880] => {
+    "command_output.stdout_lines": [
+        "up 8 weeks, 5 hours, 48 minutes",
+        "-rw-rw-r-- 1 avante avante 36132 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 18612 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01867] => {
+    "command_output.stdout_lines": [
+        "up 22 weeks, 2 days, 6 hours, 55 minutes",
+        "-rw-rw-r-- 1 avante avante 64727 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 37785 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01890] => {
+    "command_output.stdout_lines": [
+        "up 2 weeks, 2 hours, 14 minutes",
+        "-rw-rw-r-- 1 avante avante 89505 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 92907 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME09782] => {
+    "command_output.stdout_lines": [
+        "up 22 weeks, 2 days, 3 hours, 58 minutes",
+        "-rw-rw-r-- 1 avante avante 118647 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante  23463 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME02524] => {
+    "command_output.stdout_lines": [
+        "up 35 weeks, 5 hours, 3 minutes",
+        "-rw-rw-r-- 1 avante avante 54679 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 18612 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME02582] => {
+    "command_output.stdout_lines": [
+        "up 5 weeks, 6 days, 7 hours, 4 minutes",
+        "-rw-rw-r-- 1 avante avante 35230 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 37785 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01873] => {
+    "command_output.stdout_lines": [
+        "up 6 weeks, 5 days, 2 hours, 37 minutes",
+        "-rw-rw-r-- 1 avante avante 36411 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 22341 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01423] => {
+    "command_output.stdout_lines": [
+        "up 8 weeks, 1 day, 4 hours, 30 minutes",
+        "-rw-rw-r-- 1 avante avante 36578 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 22341 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01882] => {
+    "command_output.stdout_lines": [
+        "up 2 weeks, 3 days, 7 hours, 45 minutes",
+        "-rw-rw-r-- 1 avante avante 36458 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 37785 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01893] => {
+    "command_output.stdout_lines": [
+        "up 8 weeks, 7 hours, 8 minutes",
+        "-rw-rw-r-- 1 avante avante 60364 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 22341 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME11808] => {
+    "command_output.stdout_lines": [
+        "up 30 weeks, 1 day, 1 hour, 39 minutes",
+        "-rw-rw-r-- 1 avante avante 67358 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 37851 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME11810] => {
+    "command_output.stdout_lines": [
+        "up 30 weeks, 1 day, 5 hours, 36 minutes",
+        "-rw-rw-r-- 1 avante avante 70264 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 22341 Sep 21 16:15 v3_ge_mm3.log"
     ]
 }
 ok: [SME01140] => {
     "command_output.stdout_lines": [
-        "up 6 weeks, 6 days, 5 hours, 21 minutes",
-        "-rw-rw-r-- 1 avante avante 29835 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 15228 Sep  9 13:15 v3_ge_mm3.log"
+        "up 8 weeks, 4 days, 8 hours, 30 minutes",
+        "-rw-rw-r-- 1 avante avante 36539 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 18612 Sep 21 16:15 v3_ge_mm3.log"
     ]
 }
 ok: [SME01141] => {
     "command_output.stdout_lines": [
-        "up 16 weeks, 3 days, 6 minutes",
-        "-rw-rw-r-- 1 avante avante 30043 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 15228 Sep  9 13:15 v3_ge_mm3.log"
+        "up 18 weeks, 1 day, 3 hours, 15 minutes",
+        "-rw-rw-r-- 1 avante avante 36439 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 18612 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01096] => {
+    "command_output.stdout_lines": [
+        "up 24 weeks, 1 day, 3 hours, 30 minutes",
+        "-rw-rw-r-- 1 avante avante 85572 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 18612 Sep 21 16:15 v3_ge_mm3.log"
     ]
 }
 ok: [SME01123] => {
     "command_output.stdout_lines": [
-        "up 26 weeks, 3 days, 23 hours, 17 minutes",
-        "-rw-rw-r-- 1 avante avante 29942 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 15228 Sep  9 13:15 v3_ge_mm3.log"
-    ]
-}
-ok: [SME01133] => {
-    "command_output.stdout_lines": [
-        "up 8 weeks, 4 days, 20 minutes",
-        "-rw-rw-r-- 1 avante avante 84514 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 18279 Sep  9 13:15 v3_ge_mm3.log"
+        "up 28 weeks, 2 days, 2 hours, 26 minutes",
+        "-rw-rw-r-- 1 avante avante 36642 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 18612 Sep 21 16:15 v3_ge_mm3.log"
     ]
 }
 ok: [SME12500] => {
     "command_output.stdout_lines": [
-        "up 11 weeks, 4 days, 3 hours, 14 minutes",
-        "-rw-rw-r-- 1 avante avante 28785 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 15228 Sep  9 13:15 v3_ge_mm3.log"
+        "up 13 weeks, 2 days, 6 hours, 24 minutes",
+        "-rw-rw-r-- 1 avante avante 35379 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 18612 Sep 21 16:15 v3_ge_mm3.log"
+    ]
+}
+ok: [SME01133] => {
+    "command_output.stdout_lines": [
+        "up 10 weeks, 2 days, 3 hours, 29 minutes",
+        "-rw-rw-r-- 1 avante avante 103006 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante  22341 Sep 21 16:15 v3_ge_mm3.log"
     ]
 }
 ok: [SME12501] => {
     "command_output.stdout_lines": [
-        "up 12 weeks, 1 day, 22 hours, 49 minutes",
-        "-rw-rw-r-- 1 avante avante 67368 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 15687 Sep  9 13:15 v3_ge_mm3.log"
+        "up 14 weeks, 1 hour, 58 minutes",
+        "-rw-rw-r-- 1 avante avante 82353 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante 19173 Sep 21 16:15 v3_ge_mm3.log"
     ]
 }
 ok: [SME10255] => {
     "command_output.stdout_lines": [
-        "up 15 weeks, 3 days, 57 minutes",
-        "-rw-rw-r-- 1 avante avante 8218207 Sep  9 13:15 v2_edu2.log",
-        "-rw-rw-r-- 1 avante avante 3077502 Sep  9 13:15 v3_ge_mm3.log",
+        "up 17 weeks, 1 day, 4 hours, 6 minutes",
+        "-rw-rw-r-- 1 avante avante 9254763 Sep 21 16:15 v2_edu2.log",
+        "-rw-rw-r-- 1 avante avante   22341 Sep 21 16:15 v3_ge_mm3.log",
         "-rw-rw-r-- 1 avante avante     282 Jun  5 09:54 v2_edu.log"
-    ]
-}
-ok: [SME02483] => {
-    "command_output.stdout_lines": [
-        "up 3 weeks, 1 day, 3 hours, 27 minutes",
-        "-rw-rw-r-- 1 avante avante 193824888 Sep  9 13:15 v2_magmon.log",
-        "-rw-rw-r-- 1 avante avante     30969 Sep  9 13:15 v3_ge_mm3.log",
-        "-rw-rw-r-- 1 avante avante       488 Jun 13 11:29 v2_rdu_9600_qa.log",
-        "-rw-rw-r-- 1 avante avante       141 Jun 13 11:28 v2_edu2.log"
     ]
 }
 
 PLAY RECAP *********************************************************************
+SME01096                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01123                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01133                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01134                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+SME01140                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01141                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01386                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01422                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01423                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01867                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01872                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01873                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01880                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01882                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01890                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01891                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01892                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01893                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME01897                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME02483                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+SME02524                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME02582                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME02583                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME09782                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME10255                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME11808                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME11810                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME12414                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+SME12415                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+SME12424                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+SME12452                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+SME12500                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME12501                   : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+SME14637                   : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+Wednesday 21 September 2022  20:37:37 +0000 (0:00:00.626)       0:00:44.039 *** 
+=============================================================================== 
+Gathering Facts -------------------------------------------------------- 32.38s
+List Files ------------------------------------------------------------- 11.02s
+debug ------------------------------------------------------------------- 0.63s

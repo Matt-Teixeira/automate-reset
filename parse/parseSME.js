@@ -1,20 +1,11 @@
 const fs = require("fs");
 const util = require("util");
+const timeMatch = require("../utils/timeMatch");
+
+const time = timeMatch();
+console.log(time);
 
 const readFile = util.promisify(fs.readFile);
-
-let date = new Date();
-let hour = date.getHours() - 4;
-let minute = date.getMinutes();
-let timeMatch;
-
-if (minute >= 15 && minute < 45) {
-  timeMatch = `${hour}:15`;
-} else if (minute > 15 && minute >= 45) {
-  timeMatch = `${hour}:45`;
-} else {
-  timeMatch = `${hour - 1}:45`;
-}
 
 function getDate() {
   return readFile("/home/matt-teixeira/Dev/ansible/myLog.txt", "utf8");
@@ -29,10 +20,12 @@ getDate()
     //const re2 = /TASK\s\[debug\].*PLAY\sRECAP/;
     //console.log(data.match(re2)[0]);
 
+    // Match for SME number
+    const reSME = /SME\d{5}/;
+
     // Get SME blocks
     const re3 = /ok:\s\[SME\d{5}\]\s=>.*?\}/g;
     const SMEs = data.match(re3);
-    //console.log(SMEs[0]);
 
     // Get Log Files for an SME block
     const re4 = /"-rw-.*?\.log/g;
@@ -42,7 +35,17 @@ getDate()
     const re5 = /\d{2}:\d{2}/g;
     const lastRunTimes = logFiles[0].match(re5);
     console.log(lastRunTimes[0]);
-    console.log(timeMatch === '15:45');
+    console.log(time === lastRunTimes[0]);
+
+    for (let [i, sme] of SMEs.entries()) {
+      let smeNum = sme.match(reSME);
+      let logfiles = sme.match(re4);
+      console.log(logfiles);
+      for (let log of logfiles) {
+        const lastRunTime = log.match(re5);
+        console.log(lastRunTime[0] === time);
+      }
+    }
   })
   .catch((error) => {
     console.log(error);
