@@ -1,9 +1,7 @@
 const execFile = require("child_process").execFile;
-const fs = require("fs");
+const path = `./read/sh/ifconfig.sh`
 
-const log = fs.createWriteStream("myLog.txt", { flags: "a" });
-
-const execTemplate = async (path, args) => {
+const execIfconfig = async (args) => {
   execFile(path, args, (error, stdout, stderr) => {
     if (error) {
       console.log(`An error: ${error}`);
@@ -11,9 +9,10 @@ const execTemplate = async (path, args) => {
     if (stderr) {
       console.log(`stderr: ${stderr}`);
     }
-    log.write(stdout);
-    return stdout;
+    console.log(stdout);
+    
+    
   });
 };
 
-module.exports = execTemplate;
+module.exports = execIfconfig;

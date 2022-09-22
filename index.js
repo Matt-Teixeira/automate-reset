@@ -9,7 +9,7 @@ const runJob = async (file, args) => {
     args: args,
   });
   // Call bash script
-  execTemplate(file, args);
+  await execTemplate(file, args);
 };
 
 const onBoot = async () => {
