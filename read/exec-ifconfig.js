@@ -1,18 +1,10 @@
-const execFile = require("child_process").execFile;
-const path = `./read/sh/ifconfig.sh`
+const util = require("util");
+const execFile = util.promisify(require("child_process").execFile);
+const path = `./read/sh/ifconfig.sh`;
 
 const execIfconfig = async (args) => {
-  execFile(path, args, (error, stdout, stderr) => {
-    if (error) {
-      console.log(`An error: ${error}`);
-    }
-    if (stderr) {
-      console.log(`stderr: ${stderr}`);
-    }
-    console.log(stdout);
-    
-    
-  });
+  const { stdout: newData } = await execFile(path, args);
+  return newData;
 };
 
 module.exports = execIfconfig;
