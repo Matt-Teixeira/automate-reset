@@ -1,7 +1,7 @@
 const execFile = require("child_process").execFile;
 const fs = require("fs");
 
-const log = fs.createWriteStream("myLog.txt", { flags: "a" });
+const log = fs.createWriteStream("myLog.txt");
 
 const execTemplate = async (path, args) => {
   execFile(path, args, (error, stdout, stderr) => {
