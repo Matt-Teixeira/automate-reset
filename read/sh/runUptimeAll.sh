@@ -1,2 +1,2 @@
 cd ~/Ansible/playbook
-ansible-playbook mmblogsuptime.yml --limit GEMM3EDU2
+ansible-playbook mmblogsuptime.yml --limit SME01872
